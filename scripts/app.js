@@ -1,7 +1,7 @@
 const gridWrapper = document.querySelector('.grid-wrapper');
+let gridSize = 16;
 
-
-const createGrid = (parentElement, size) => {
+const createGrid = (parentElement, size, hoverFunction) => {
     const parentWidth = parentElement.clientWidth;
     const elementWidth = parentWidth / size;
     for(i = 0; i < size; i++){
@@ -11,14 +11,19 @@ const createGrid = (parentElement, size) => {
             newDiv.style.cssText = 
                 `display: inline-block;
                 margin-bottom: -2px;
-                border: 1px solid #aaa;
+                border: 1px solid #ddd;
                 width: ${elementWidth}px;
-                height: ${elementWidth}px;`; 
-            console.log(newDiv.clientWidth);
+                height: ${elementWidth}px;`;
+            
+            newDiv.addEventListener("mouseover", (e) => hoverFunction(e));
             parentElement.appendChild(newDiv);
         }
     }
 }
 
+const hoverBlack = e =>{
+    e.target.style.background = "black";
+}
 
-createGrid(gridWrapper, 24);
+
+createGrid(gridWrapper, gridSize, hoverBlack);
