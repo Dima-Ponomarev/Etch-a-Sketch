@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="./scripts/app.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title>Etch-a-Sketch</title>
 </head>
-<body>
+<body>  
     <div class="wrapper">
+        <header>
+            <h1 class="default-header">Etch<span id="header-a">-a-</span>Sketch</h1>
+        </header>
+        <div class="controls">
+            <button class="reset-btn">Reset</button>
+            <button class="default-option">Default</button>
+            <button class="rainbow-option">Rainbow</button>
+            <button class="shadow-option">Shadow</button>
+        </div>
         <div class="grid-wrapper"></div>
     </div>
 </body>

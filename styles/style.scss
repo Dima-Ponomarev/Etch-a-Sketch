@@ -8,14 +8,66 @@ html{
     font-size: 10px;
 }
 
+
 .wrapper{
     max-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+h1{
+    font-family: 'Russo One', sans-serif;
+    font-size: 8rem;
+}
+
+.default-header{
+    #header-a{
+        color: white;
+        -webkit-text-stroke: 1px black;
+    }
+}
+.rainbow-header{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.shadow-header{
+    background-image: linear-gradient(to left, #ddd, black);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+.controls{
+    padding: 1rem 0;
+    button{
+        font-size: 2rem;
+        font-family: 'Russo One', sans-serif;
+
+        cursor: pointer;
+        padding: 1.6rem 4rem;
+        margin: 0 1.5rem;
+
+        &:hover{
+            background: black;
+            color: white;
+            border: 2px solid white;
+        }
+    }
+}
+
+
 .grid-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+
     border: 1px solid black;
 
-    width: 80rem;
-    height: 80rem;
+    width: 75rem;
+    height: 75rem;
 }
 
